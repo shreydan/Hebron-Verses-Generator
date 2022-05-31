@@ -1,0 +1,124 @@
+html, body {
+    width: 1080px;
+    height: 1920px;
+    margin: 0;
+    font-family: 'Roboto Slab', sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.grid-container {
+    box-sizing: border-box;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-rows: 1.5fr 3fr 3fr 3fr 1fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header header"
+        ". english english ."
+        ". hindi hindi ."
+        ". telugu telugu ."
+        ". book-names reference ."
+        "em1 credits credits em2";
+    border: 10px solid #470a8d;
+}
+
+.flexcc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.date { grid-area: date; }
+
+.header { 
+    grid-area: header; 
+    font-weight: 900; 
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header #_date {
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 1% 2%;
+    background-color: #470a8d;
+    color: white;
+    border-radius: 100px;
+}
+.header #_title {
+    color: #b61a1a;
+    text-shadow: 0px 4px 0px rgb(228, 185, 44);
+}
+
+.english { grid-area: english; font-family: 'Roboto Slab', sans-serif;}
+
+.hindi { grid-area: hindi; font-family: 'Noto Sans', sans-serif;}
+
+.telugu { grid-area: telugu; font-family: 'Hind Guntur', sans-serif;}
+
+.credits { 
+    grid-area: credits;
+    font-size: 2rem;
+}
+.credits div {
+    padding: 1% 3%;
+    background-color: #21cf95;
+    color: white;
+    border-radius: 100px;
+}
+.em1 {
+    grid-area: em1;
+}
+.em2 {
+    grid-area: em2;
+}
+
+.book-names {
+	display: grid;
+	grid-template-columns: 0.5fr 2fr 0fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 0px 0px;
+	grid-template-areas: ". eng eng" ". hin hin" ". tel tel";
+	grid-area: book-names;
+	justify-items: end;
+    align-items: center;
+}
+.book-names div {
+    padding-right: 2%;
+    font-size: 2.5rem;
+}
+
+#eV {
+    color: #9c1d6c;
+    font-weight: 700;
+}
+#hV {
+    color: #0f4c8d;
+    font-weight: 700;
+}
+#tV {
+    color: #14aa41;
+    font-weight: 700;
+}
+
+.eng { grid-area: eng;  font-weight: 700; color: #e8259d;}
+
+.hin { grid-area: hin; font-family: 'Noto Sans', sans-serif;  font-weight: 700; color: #2583e8;}
+
+.tel { grid-area: tel; font-family: 'Hind Guntur', sans-serif;  font-weight: 700; color: #1adb95;}
+
+.reference { 
+    grid-area: reference; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    padding-left: 2%;
+    font-size: 8em;
+    font-weight: 300;
+}
