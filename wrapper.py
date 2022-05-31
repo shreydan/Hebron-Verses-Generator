@@ -19,5 +19,4 @@ for date in month:
     modify_html(verseObj)
     convert_to_image(verseObj,_month)
 
-
-    print(f"generated {verseObj['book'][0]} {verseObj['reference']}")
+    print(f"generated {verseObj['book'][0]} {verseObj['reference']}\n\n")
