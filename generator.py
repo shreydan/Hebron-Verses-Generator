@@ -1,11 +1,7 @@
-import asyncio
-from pyppeteer import launch
-import sys
+import shlex
+import subprocess
 import os
-from datetime import date
 from bs4 import BeautifulSoup
-
-
 
 def modify_html(verseObj):
     file = os.path.join(os.getcwd(),'src','index.html')
@@ -29,12 +25,19 @@ def modify_html(verseObj):
     html = open(file,'w',encoding='utf-8')
     html.write(soup.prettify())
     html.close()
+    print('fetched...generating image...')
+
+def generate_png(src, dest):
+    print('running command...')
+    command = f'google-chrome --headless --disable-gpu --screenshot={dest} --window-size=1080,1920  {src}'
+    command = shlex.split(command)
+    subprocess.run(command)
 
 
 def convert_to_image(verseObj,_month):
 
     _HTML = os.path.join(os.getcwd(),'src','index.html')
-    file_name = f'{(verseObj["date"]).replace("/","-")}__{verseObj["book"][0]} {verseObj["reference"]}'
+    file_name = f'{(verseObj["date"]).replace("/","-")}__{verseObj["book"][0]}_{verseObj["reference"]}'.replace(' ', '-')
     _FOLDER = os.path.join(os.getcwd(),'output',_month)
     _OUTFILE = os.path.join(_FOLDER,file_name+'.png')
 
@@ -42,14 +45,5 @@ def convert_to_image(verseObj,_month):
         os.makedirs(_FOLDER)
     sourcepath = 'file://' + _HTML
 
-    async def generate_png():
-        browser = await launch()
-        page = await browser.newPage()
-        await page.goto(sourcepath, {'waitUntil' : 'domcontentloaded'})
-        await page.evaluateHandle('document.fonts.ready')
-        await page.setViewport({ 'width': 1080, 'height': 1920 })
-        await page.screenshot({'path': _OUTFILE, 'fullPage': True})
-        await browser.close()
-
-
-    asyncio.get_event_loop().run_until_complete(generate_png())
+    
+    generate_png(sourcepath, _OUTFILE)
