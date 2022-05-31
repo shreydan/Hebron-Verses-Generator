@@ -17,3 +17,15 @@ API_KEY = 'api_key_string'
 ```
 
 ---
+
+### Hebron | Fellowship
+
+[Hebron Church](https://www.hebronfellowship.in)
+HNo: 1-1-574, Golconda X Roads
+Musheerabad, Gandhi Nagar
+Hyderabad, Telangana-500020
+India
+
+---
+
+### Siyyon Prayer House, Raipur, Chhattisgarh, India
