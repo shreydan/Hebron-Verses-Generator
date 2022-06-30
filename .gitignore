@@ -3,3 +3,5 @@ output/*
 !output/.gitkeep
 *test.py
 config.py
+src/fonts/*
+!src/fonts/.gitkeep

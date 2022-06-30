@@ -1,3 +1,53 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(fonts/Roboto_Slab/static/RobotoSlab-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(fonts/Roboto_Slab/static/RobotoSlab-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(fonts/Roboto_Slab/static/RobotoSlab-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url(fonts/Noto_Sans/NotoSans-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url(fonts/Noto_Sans/NotoSans-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Hind Guntur';
+    src: url(fonts/Hind_Guntur/HindGuntur-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Hind Guntur';
+    src: url(fonts/Hind_Guntur/HindGuntur-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Hind Guntur';
+    src: url(fonts/Hind_Guntur/HindGuntur-Bold.ttf);
+    font-weight: 700;
+}
+
+
+
 html, body {
     width: 1080px;
     height: 1920px;
