@@ -10,6 +10,10 @@
 - `google-chrome --headless` bash command is run from the python script `generator.py` using `subprocess` module and command string is split properly using `shlex`.
 - Read more on Chrome headless: [Starting Headless (CLI)](https://developers.google.com/web/updates/2017/04/headless-chrome)
 - Saved in `output` folder with month name.
+- FONTS - saved in [fonts dir](/src/fonts/):
+  - English: [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab)
+  - Hindi: [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans?query=noto+sans)
+  - Telugu: [Hind Guntur](https://fonts.google.com/specimen/Hind+Guntur?query=hind+guntur#standard-styles)
 
 ```python
 # config.py
