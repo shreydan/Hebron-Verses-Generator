@@ -3,8 +3,8 @@ from fetcher import fetchVerse
 import os
 import json
 
-month = [f'2022-11-{str(i).zfill(2)}' for i in range(1,31)]
-_month = 'november'
+month = [f'2022-12-{str(i).zfill(2)}' for i in range(1,32)]
+_month = 'december'
 
 f = open(os.path.join(os.getcwd(),'calendar-data-2022.json'))
 dates = json.load(f)
