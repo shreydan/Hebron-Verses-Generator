@@ -3,17 +3,17 @@ from fetcher import fetchVerse
 import os
 import json
 
-month = [f'2022-12-{str(i).zfill(2)}' for i in range(1,32)]
-_month = 'december'
+month = [f'2023-01-{str(i).zfill(2)}' for i in range(1,32)]
+_month = 'JANUARY'
 
-f = open(os.path.join(os.getcwd(),'calendar-data-2022.json'))
+f = open(os.path.join(os.getcwd(),'calendar-data-2023.json'))
 dates = json.load(f)
 f.close()
 
 print("Praise the Lord!")
 
 for date in month:
-    verseID = dates['Hebron'][date]['verseid']
+    verseID = dates['hebron'][date]['verseid']
     print(verseID, date)
     verseObj = fetchVerse(verseID,date)
     modify_html(verseObj)
