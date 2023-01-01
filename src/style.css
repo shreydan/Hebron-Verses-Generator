@@ -58,12 +58,12 @@ html, body {
 }
 
 .grid-container {
-    box-sizing: border-box;
+    box-sizing: content-box;
     display: grid;
     height: 100%;
     width: 100%;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
-    grid-template-rows: 1.5fr 3fr 3fr 3fr 1fr 0.5fr;
+    grid-template-rows: 0.9fr 3fr 3fr 3fr 1fr 0.25fr;
     gap: 0px 0px;
     grid-template-areas:
         "header header header header"
@@ -71,8 +71,10 @@ html, body {
         ". hindi hindi ."
         ". telugu telugu ."
         ". book-names reference ."
-        "em1 credits credits em2";
-    border: 10px solid #470a8d;
+        "credits credits credits credits";
+
+    box-shadow: 0 0 0 10px white inset, 0 0 0 20px #db214f inset;
+    border-radius: 10px;
 }
 
 .flexcc {
@@ -91,20 +93,21 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
 }
-.header #_date {
-    font-weight: 400;
-    font-size: 2rem;
-    padding: 1% 2%;
-    background-color: #470a8d;
-    color: white;
-    border-radius: 100px;
-}
+
 .header #_title {
-    color: #b61a1a;
-    text-shadow: 0px 4px 0px rgb(228, 185, 44);
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    width: 80%;
+    justify-content: space-between;
+    padding: 0.75rem 2rem;
+    background-color: #db214f;
+    border-radius: 100px;
+    color: white;
 }
+
 
 .english { grid-area: english; font-family: 'Roboto Slab', sans-serif;}
 
@@ -114,19 +117,12 @@ html, body {
 
 .credits { 
     grid-area: credits;
-    font-size: 2rem;
-}
-.credits div {
+    font-size: 1.5rem;
     padding: 1% 3%;
-    background-color: #21cf95;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    background-color: #db214f;
     color: white;
-    border-radius: 100px;
-}
-.em1 {
-    grid-area: em1;
-}
-.em2 {
-    grid-area: em2;
 }
 
 .book-names {
@@ -145,23 +141,23 @@ html, body {
 }
 
 #eV {
-    color: #9c1d6c;
+    color: #bb21de;
     font-weight: 700;
 }
 #hV {
-    color: #0f4c8d;
+    color: #155fbf;
     font-weight: 700;
 }
 #tV {
-    color: #14aa41;
+    color: #07b830;
     font-weight: 700;
 }
 
-.eng { grid-area: eng;  font-weight: 700; color: #e8259d;}
+.eng { grid-area: eng;  font-weight: 700; color: #bb21de;}
 
-.hin { grid-area: hin; font-family: 'Noto Sans', sans-serif;  font-weight: 700; color: #2583e8;}
+.hin { grid-area: hin; font-family: 'Noto Sans', sans-serif;  font-weight: 700; color: #155fbf;}
 
-.tel { grid-area: tel; font-family: 'Hind Guntur', sans-serif;  font-weight: 700; color: #1adb95;}
+.tel { grid-area: tel; font-family: 'Hind Guntur', sans-serif;  font-weight: 700; color: #07b830;}
 
 .reference { 
     grid-area: reference; 
