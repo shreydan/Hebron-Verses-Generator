@@ -72,9 +72,10 @@ html, body {
         ". telugu telugu ."
         ". book-names reference ."
         "credits credits credits credits";
-
-    box-shadow: 0 0 0 10px white inset, 0 0 0 20px #db214f inset;
-    border-radius: 10px;
+    /* border: 10px solid #3b1bcc; */
+    box-shadow: 0 0 0 10px #3b1bcc inset;
+    
+    /* border-radius: 10px; */
 }
 
 .flexcc {
@@ -100,10 +101,10 @@ html, body {
     display: flex;
     flex-direction: row;
     font-size: 2rem;
-    width: 80%;
+    width: 90%;
     justify-content: space-between;
     padding: 0.75rem 2rem;
-    background-color: #db214f;
+    background-color: #3b1bcc;
     border-radius: 100px;
     color: white;
 }
@@ -120,8 +121,8 @@ html, body {
     font-size: 1.5rem;
     padding: 1% 3%;
     margin: 0 10px;
-    margin-bottom: 10px;
-    background-color: #db214f;
+    margin-bottom: 0px;
+    background-color: #3b1bcc;
     color: white;
 }
 
