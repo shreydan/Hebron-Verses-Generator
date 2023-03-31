@@ -29,7 +29,7 @@ def modify_html(verseObj):
 
 def generate_png(src, dest):
     print('running command...')
-    command = f'google-chrome --headless --disable-gpu --screenshot={dest} --window-size=1080,1920  {src}'
+    command = f'google-chrome --headless=new --disable-gpu --screenshot={dest} --window-size=1085,2025  {src} --start-maximized --hide-scrollbars'
     command = shlex.split(command)
     subprocess.run(command)
 

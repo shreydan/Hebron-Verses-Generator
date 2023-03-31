@@ -1,3 +1,9 @@
+```
+warning: Chrome headless currently has a bug which defaults the screenshots to 800x600, switching to headless=new + updated resolution.
+
+```
+
+
 # Praise the Lord
 
 ---
