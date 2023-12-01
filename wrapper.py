@@ -4,9 +4,9 @@ import os
 import json
 import time
 
-month = [f'2023-10-{str(i).zfill(2)}' for i in range(1,32)]
+month = [f'2023-12-{str(i).zfill(2)}' for i in range(1,32)]
 
-_month = 'OCTOBER'
+_month = 'DECEMBER'
 
 f = open(os.path.join(os.getcwd(),'calendar-data-2023.json'))
 dates = json.load(f)
