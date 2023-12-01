@@ -5,8 +5,8 @@ from datetime import date, timedelta
 
 def main(db_path):
     days = {}
-    start_date = date(2023,1,1)
-    end_date = date(2023,12,31)
+    start_date = date(2024,1,1)
+    end_date = date(2024,12,31)
     delta = end_date - start_date
     for i in range(delta.days + 1):
         day = start_date + timedelta(days=i)
@@ -22,7 +22,7 @@ def main(db_path):
 
 
 if __name__ == '__main__':
-    year = '2023'
-    db_path = Path('calendar-data-2023.json')
+    year = '2024'
+    db_path = Path(f'calendar-data-{year}.json')
     db_path.touch(exist_ok=True)
     main(db_path)
