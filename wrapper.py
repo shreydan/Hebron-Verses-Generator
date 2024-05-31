@@ -4,9 +4,9 @@ import os
 import json
 import time
 
-month = [f'2024-04-{str(i).zfill(2)}' for i in range(1,31)]
+month = [f'2024-06-{str(i).zfill(2)}' for i in range(1,30)]
 
-_month = 'APRIL'
+_month = 'JUNE'
 
 f = open(os.path.join(os.getcwd(),'calendar-data-2024.json'))
 dates = json.load(f)
