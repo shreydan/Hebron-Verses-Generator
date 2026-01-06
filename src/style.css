@@ -1,179 +1,212 @@
 :root {
-    --title: #780f83;
-    --border: #780f83;
-    --telugu: #df164f;
-    --english: #284dd0;
-    --hindi: #3a6811;
+  --title: #812cf4;
+  --border: #812cf4;
+  --telugu: #760a7c;
+  --english: #397107;
+  --hindi: #e20707;
 }
 
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url(fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf);
-    font-weight: 400;
+  font-family: "Roboto Slab";
+  src: url(fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf);
+  font-weight: 400;
 }
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url(fonts/Roboto_Slab/static/RobotoSlab-Light.ttf);
-    font-weight: 300;
+  font-family: "Roboto Slab";
+  src: url(fonts/Roboto_Slab/static/RobotoSlab-Light.ttf);
+  font-weight: 300;
 }
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url(fonts/Roboto_Slab/static/RobotoSlab-Bold.ttf);
-    font-weight: 700;
+  font-family: "Roboto Slab";
+  src: url(fonts/Roboto_Slab/static/RobotoSlab-Bold.ttf);
+  font-weight: 700;
 }
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url(fonts/Roboto_Slab/static/RobotoSlab-Black.ttf);
-    font-weight: 900;
+  font-family: "Roboto Slab";
+  src: url(fonts/Roboto_Slab/static/RobotoSlab-Black.ttf);
+  font-weight: 900;
 }
 
 @font-face {
-    font-family: 'Noto Sans';
-    src: url(fonts/Noto_Sans/NotoSans-Regular.ttf);
-    font-weight: 400;
+  font-family: "Noto Sans";
+  src: url(fonts/Noto_Sans/NotoSans-Regular.ttf);
+  font-weight: 400;
 }
 @font-face {
-    font-family: 'Noto Sans';
-    src: url(fonts/Noto_Sans/NotoSans-Bold.ttf);
-    font-weight: 700;
+  font-family: "Noto Sans";
+  src: url(fonts/Noto_Sans/NotoSans-Bold.ttf);
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: 'Hind Guntur';
-    src: url(fonts/Hind_Guntur/HindGuntur-Regular.ttf);
-    font-weight: 400;
+  font-family: "Hind Guntur";
+  src: url(fonts/Hind_Guntur/HindGuntur-Regular.ttf);
+  font-weight: 400;
 }
 @font-face {
-    font-family: 'Hind Guntur';
-    src: url(fonts/Hind_Guntur/HindGuntur-Medium.ttf);
-    font-weight: 500;
+  font-family: "Hind Guntur";
+  src: url(fonts/Hind_Guntur/HindGuntur-Medium.ttf);
+  font-weight: 500;
 }
 @font-face {
-    font-family: 'Hind Guntur';
-    src: url(fonts/Hind_Guntur/HindGuntur-Bold.ttf);
-    font-weight: 700;
+  font-family: "Hind Guntur";
+  src: url(fonts/Hind_Guntur/HindGuntur-Bold.ttf);
+  font-weight: 700;
 }
 
-
-
-html, body {
-    width: 1080px;
-    height: 1920px;
-    margin: 0;
-    font-family: 'Roboto Slab', sans-serif;
-    text-align: center;
-    background-color: #ffffff;
+html,
+body {
+  width: 1080px;
+  height: 1920px;
+  margin: 0;
+  font-family: "Roboto Slab", sans-serif;
+  text-align: center;
+  background-color: #ffffff;
 }
 
 .grid-container {
-    box-sizing: content-box;
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
-    grid-template-rows: 0.9fr 3fr 3fr 3fr 1fr 0.25fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        "header header header header"
-        ". english english ."
-        ". hindi hindi ."
-        ". telugu telugu ."
-        ". book-names reference ."
-        "credits credits credits credits";
-    /* border: 10px solid #3b1bcc; */
-    box-shadow: 0 0 0 10px var(--border) inset;
-    
-    /* border-radius: 10px; */
+  background-image: url("./bg.jpg");
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+  box-sizing: content-box;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+  grid-template-rows: 0.9fr 3fr 3fr 3fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header header"
+    ". english english ."
+    ". hindi hindi ."
+    ". telugu telugu ."
+    ". book-names reference ."
+    ". credits credits .";
+  /* border: 10px solid #3b1bcc; */
+  /* box-shadow: 0 0 0 10px var(--border) inset; */
+
+  /* border-radius: 10px; */
 }
 
 .flexcc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
 }
 
-.date { grid-area: date; }
+.date {
+  grid-area: date;
+}
 
-.header { 
-    grid-area: header; 
-    font-weight: 900; 
-    font-size: 4em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+.header {
+  grid-area: header;
+  font-weight: 900;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .header #_title {
-    display: flex;
-    flex-direction: row;
-    font-size: 2rem;
-    width: 90%;
-    justify-content: space-between;
-    padding: 0.75rem 2rem;
-    background-color: var(--title);
-    border-radius: 100px;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  /* width: 100%; */
+  /* justify-content: center; */
+  padding: 0;
+  color: black;
+}
+#_date {
+  color: var(--border);
 }
 
+.english {
+  grid-area: english;
+  font-family: "Roboto Slab", sans-serif;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
 
-.english { grid-area: english; font-family: 'Roboto Slab', sans-serif;}
+.hindi {
+  grid-area: hindi;
+  font-family: "Noto Sans", sans-serif;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
 
-.hindi { grid-area: hindi; font-family: 'Noto Sans', sans-serif;}
+.telugu {
+  grid-area: telugu;
+  font-family: "Hind Guntur", sans-serif;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
 
-.telugu { grid-area: telugu; font-family: 'Hind Guntur', sans-serif;}
-
-.credits { 
-    grid-area: credits;
-    font-size: 1.5rem;
-    padding: 1% 3%;
-    margin: 0 10px;
-    margin-bottom: 0px;
-    background-color: var(--border);
-    color: white;
+.credits {
+  grid-area: credits;
+  font-size: 1.5rem;
+  padding: 1% 1%;
+  margin: 0px;
+  margin-bottom: 0px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: var(--border);
+  color: white;
 }
 
 .book-names {
-	display: grid;
-	grid-template-columns: 0.5fr 2fr 0fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	gap: 0px 0px;
-	grid-template-areas: ". eng eng" ". hin hin" ". tel tel";
-	grid-area: book-names;
-	justify-items: end;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". eng eng" ". hin hin" ". tel tel";
+  grid-area: book-names;
+  justify-items: end;
+  align-items: center;
 }
 .book-names div {
-    padding-right: 2%;
-    font-size: 2.5rem;
+  padding-right: 2%;
+  font-size: 2.5rem;
 }
 
 #eV {
-    color: var(--english);
-    font-weight: 700;
+  color: var(--english);
+  font-weight: 700;
 }
 #hV {
-    color: var(--hindi);
-    font-weight: 700;
+  color: var(--hindi);
+  font-weight: 700;
 }
 #tV {
-    color: var(--telugu);
-    font-weight: 700;
+  color: var(--telugu);
+  font-weight: 700;
 }
 
-.eng { grid-area: eng;  font-weight: 700; color: var(--english);}
+.eng {
+  grid-area: eng;
+  font-weight: 700;
+  color: var(--english);
+}
 
-.hin { grid-area: hin; font-family: 'Noto Sans', sans-serif;  font-weight: 700; color: var(--hindi);}
+.hin {
+  grid-area: hin;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  color: var(--hindi);
+}
 
-.tel { grid-area: tel; font-family: 'Hind Guntur', sans-serif;  font-weight: 700; color: var(--telugu);}
+.tel {
+  grid-area: tel;
+  font-family: "Hind Guntur", sans-serif;
+  font-weight: 700;
+  color: var(--telugu);
+}
 
-.reference { 
-    grid-area: reference; 
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
-    padding-left: 2%;
-    font-size: 8em;
-    font-weight: 300;
+.reference {
+  grid-area: reference;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+  font-size: 8em;
+  font-weight: 300;
 }
