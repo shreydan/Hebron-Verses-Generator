@@ -4,11 +4,11 @@ import os
 import json
 import time
 
-month = [f'2025-12-{str(i).zfill(2)}' for i in range(17,18)]
+month = [f'2026-01-{str(i).zfill(2)}' for i in range(1,32)]
 
-_month = 'DECEMBER'
+_month = 'JANUARY'
 
-f = open(os.path.join(os.getcwd(),'calendar-data-2025.json'))
+f = open(os.path.join(os.getcwd(),'calendar-data-2026.json'))
 dates = json.load(f)
 f.close()
 

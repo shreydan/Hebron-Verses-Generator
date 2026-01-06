@@ -3,7 +3,7 @@
   --border: #812cf4;
   --telugu: #760a7c;
   --english: #397107;
-  --hindi: #e20707;
+  --hindi: #b51818;
 }
 
 @font-face {
@@ -65,8 +65,11 @@ body {
 }
 
 .grid-container {
-  background-image: url("./bg.jpg");
-  background-position: center;
+  /* background-image: url("./bg.jpg"); */
+  /* background-position: center; */
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
   background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: lighten;
   box-sizing: content-box;
